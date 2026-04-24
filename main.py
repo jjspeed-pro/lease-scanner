@@ -17,7 +17,7 @@ def extract_prices(text):
         if "€" in line:
             try:
                 price = int(''.join(filter(str.isdigit, line)))
-                if 150 < price <= 250:
+                if price <= 300:
                     deals.append(line.strip())
             except:
                 pass
